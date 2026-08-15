@@ -1,0 +1,33 @@
+{
+  "name": "mitra_whatsapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "check": "node --check index.js && node --check config.js && node --check menu.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmrangel/mitra_whatsapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/dmrangel/mitra_whatsapp/issues"
+  },
+  "homepage": "https://github.com/dmrangel/mitra_whatsapp#readme",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.34.6"
+  },
+  "overrides": {
+    "puppeteer": "24.38.0"
+  }
+}
