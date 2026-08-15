@@ -15,9 +15,10 @@ if (erros.length > 0) {
     process.exit(1);
 }
 
-// Requerer o cliente já dispara, nesta ordem: limpeza do Chrome/locks e
-// criação do Client (ver lib/cliente.js).
-const { client } = require('./lib/cliente');
+// A limpeza do Chrome/locks e a criação do Client (ver lib/cliente.js) só
+// acontecem aqui, na primeira chamada — não como efeito colateral do require.
+const { obterCliente } = require('./lib/cliente');
+const client = obterCliente();
 
 const { AVISO_LIGACAO } = require('./lib/textos');
 const { enviar } = require('./lib/envio');

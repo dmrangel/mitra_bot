@@ -27,6 +27,17 @@ if not exist "node_modules" (
     )
 )
 
+echo Rodando os testes automatizados...
+call npm test
+if errorlevel 1 (
+    echo.
+    echo ERRO: os testes falharam. O bot NAO sera iniciado.
+    echo Corrija o problema indicado acima antes de tentar novamente.
+    echo.
+    pause
+    exit /b 1
+)
+
 echo Iniciando o sistema de atendimento...
 REM Usa "npx pm2" em vez de "pm2" direto: o atalho pm2.cmd que o npm cria
 REM as vezes nao e reconhecido pelo cmd.exe (bug conhecido do shim em
