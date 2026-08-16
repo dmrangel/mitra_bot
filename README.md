@@ -1,4 +1,4 @@
-# mitra_whatsapp
+# mitra-bot
 
 Bot de atendimento automático do WhatsApp do Santuário de Santa Rita.
 
